@@ -35,8 +35,8 @@ void main() {
     verify(() => repository.getSpaceMediaFromDate(tDate)).called(1);
   });
   test('Should return a ServerFailure when don\'t succeed', () async {
-    when(() => repository.getSpaceMediaFromDate(tDate)).thenAnswer(
-        (_) async => Left<Failure, SpaceMediaEntity>(ServerFailure()));
+    when(() => repository.getSpaceMediaFromDate(tDate))
+        .thenAnswer((_) async => Left<Failure, SpaceMediaEntity>(ServerFailure()));
     final result = await useCase(tDate);
     expect(result, Left(ServerFailure()));
     verify(() => repository.getSpaceMediaFromDate(tDate)).called(1);
