@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:nasa_clean_arch/core/erros/exceptions.dart';
-import 'package:nasa_clean_arch/core/erros/failure.dart';
+import 'package:nasa_clean_arch/core/usecase/erros/exceptions.dart';
+import 'package:nasa_clean_arch/core/usecase/erros/failure.dart';
 import 'package:nasa_clean_arch/features/data/datasource/space_media_datasource.dart';
 import 'package:nasa_clean_arch/features/data/models/space_media_model.dart';
 import 'package:nasa_clean_arch/features/data/repositories/space_media_repository_implementation.dart';
