@@ -11,7 +11,7 @@ import 'package:nasa_clean_arch/features/data/models/space_media_model.dart';
 class NasaDataSourceImplementation implements ISpaceMediaDataSource {
   final HttpClient client;
 
-  NasaDataSourceImplementation(this.client);
+  NasaDataSourceImplementation({required this.client});
 
   @override
   Future<SpaceMediaModel> getSpaceMediaFromDate(DateTime date) async {
