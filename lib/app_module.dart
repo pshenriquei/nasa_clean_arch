@@ -16,9 +16,9 @@ class AppModule extends Module {
     Bind.factory((i) => HomeStore(i())),
     Bind.lazySingleton((i) => GetSpaceMediaFromDateUseCase(i())),
     Bind.lazySingleton((i) => SpaceMediaRepositoryImplementation(i())),
-    Bind.lazySingleton((i) => NasaDataSourceImplementation(client: i())),
+    Bind.lazySingleton((i) => SpaceMediaDatasouceImplementation(converter: i(), client: i())),
     Bind.lazySingleton((i) => http.Client()),
-    Bind.lazySingleton((i) => DateToStringConverter()),
+    Bind.lazySingleton((i) => DateInputConverter()),
   ];
 
   @override
